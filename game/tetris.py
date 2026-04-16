@@ -199,8 +199,8 @@ def main():
 
 	#Dictionary of locked coordinates, (x,y): color
 	locked = {}
-	change_piece = None
 	tetraminoe = get_random_tetraminoe()
+	next_tertraminoe = get_random_tetraminoe()
 
 	clock = pygame.time.Clock()
 	fall_speed = 0.3
@@ -225,7 +225,8 @@ def main():
 				current_coor = get_coordinates(tetraminoe)
 				lock_coordinates(current_coor, tetraminoe, locked)
 
-				tetraminoe = get_random_tetraminoe()
+				tetraminoe = next_tertraminoe
+				next_tertraminoe = get_random_tetraminoe()
 
 				clear_lines(locked)
 
