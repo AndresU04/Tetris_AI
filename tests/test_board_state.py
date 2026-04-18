@@ -68,4 +68,4 @@ if __name__ == "__main__":
     test_get_holes()
     test_get_bumpiness()
     test_get_complete_lines()
-    print("\n All board_state tests passed!")
+    print("\n (˶ᵔ ᵕ ᵔ˶) All board_state tests passed!")
