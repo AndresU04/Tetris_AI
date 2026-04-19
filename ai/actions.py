@@ -23,11 +23,15 @@ def simulate_drop(board, piece, col):
         return None
     
     # Find the lowest row the piece can drop to 
-    drop_row = 0
+    drop_row = None
     for row in range(board.shape[0] - piece_height + 1):
-        if np.any(board[row: row + piece_height, col: col + piece_width] + piece > 1):
+        if np.any(board[row:row + piece_height, col:col + piece_width] + piece > 1):
             break
         drop_row = row
+
+    # If no valid row was found, placement is invalid
+    if drop_row is None:
+        return None
     
     # Place the piece on a copy of the board
     new_board = board.copy()
