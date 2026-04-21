@@ -9,7 +9,7 @@ from board_state import (
 WEIGHT_AGGREGATE_HEIGHT = -0.510066
 WEIGHT_HOLES = -0.35663
 WEIGHT_BUMPINESS = -0.184483
-WEIGHT_COMPLETE_LINES = 0.760666
+WEIGHT_COMPLETE_LINES = 3.00
 
 def score_board(board):
     """Scores a board state using the given heuristic weights.
